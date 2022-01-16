@@ -17,14 +17,14 @@ var nodemailer = require('nodemailer') ;
 var transporter = nodemailer.createTransport({
   service:'gmail',
   auth:{
-    user:'dali.mani652@gmail.com',
-    pass:'pfcgiktydjslymcl'
+    user:'your email here',
+    pass:'your email password'
   }
 }) ; 
 
 var mailOptions = {
-  from:'dali.mani652@gmail.com',
-  to:'mohamedali.mani@esprit.tn',
+  from:'your email here',
+  to:'email of the receiver',
   subject:'FIRE ALERT !',
   text:'sorry for bothering you but apparently your house is on fire ! good luck'
 }
@@ -79,11 +79,11 @@ client.on('message',(topic,payload)=>{
           console.log('Email sent:' + info.response) ;
         }
       })
-      const client = require('twilio')('ACcca839a314a9e300cc539b1c749870f6', '85d750d80cfb52b0a44d6db02b870331');
+      const client = require('twilio')('ACCOUNT SID', 'AUTH TOKEN');
       client.messages
         .create({
-          to: '+21651591580',
-          from: '+19362463988',
+          to: 'receiver phone number',
+          from: '+sender phone number',
           body: 'BURN BABY BUUUUUUURN !',
         })
         .then(message => console.log(message.sid));
