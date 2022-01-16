@@ -14,7 +14,9 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.5",
     "mqtt": "^4.3.4",
+    "nodemailer": "^6.7.2",
     "socket.io": "^4.4.1",
-    "socket.io-client": "^4.4.1"
+    "socket.io-client": "^4.4.1",
+    "twilio": "^3.73.0"
   }
 }
