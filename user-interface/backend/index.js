@@ -47,8 +47,8 @@ const client = mqtt.connect(connectUrl,{       // mqtt broker model & connection
     clientId,
     clean:true,
     connectTimeout:4000,
-    username:'mani',
-    password:'mani',
+    username:'username',
+    password:'password',
     reconnectPeriod:1000,
 }) ;
 
