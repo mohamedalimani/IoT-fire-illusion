@@ -17,14 +17,14 @@ var nodemailer = require('nodemailer') ;
 var transporter = nodemailer.createTransport({
   service:'gmail',
   auth:{
-    user:'dali.mani652@gmail.com',
-    pass:'pfcgiktydjslymcl'
+    user:'your email here',
+    pass:'your email password'
   }
 }) ; 
 
 var mailOptions = {
-  from:'dali.mani652@gmail.com',
-  to:'mohamedali.mani@esprit.tn',
+  from:'your email here',
+  to:'email of the receiver',
   subject:'FIRE ALERT !',
   text:'sorry for bothering you but apparently your house is on fire ! good luck'
 }
@@ -47,8 +47,8 @@ const client = mqtt.connect(connectUrl,{       // mqtt broker model & connection
     clientId,
     clean:true,
     connectTimeout:4000,
-    username:'mani',
-    password:'mani',
+    username:'username',
+    password:'password',
     reconnectPeriod:1000,
 }) ;
 
@@ -79,11 +79,15 @@ client.on('message',(topic,payload)=>{
           console.log('Email sent:' + info.response) ;
         }
       })
+<<<<<<< HEAD
       const client = require('twilio')('ACcca839a314a9e300cc539b1c749870f6', '6c117a1a4e1733549a5c29edf32fd988');
+=======
+      const client = require('twilio')('ACCOUNT SID', 'AUTH TOKEN');
+>>>>>>> 8a9ceca53154ca28db58c8a29877da59f2f73828
       client.messages
         .create({
-          to: '+21651591580',
-          from: '+19362463988',
+          to: 'receiver phone number',
+          from: '+sender phone number',
           body: 'BURN BABY BUUUUUUURN !',
         })
         .then(message => console.log(message.sid));
