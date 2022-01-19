@@ -80,7 +80,7 @@ client.on('message',(topic,payload)=>{
         }
       })
 <<<<<<< HEAD
-      const client = require('twilio')('ACcca839a314a9e300cc539b1c749870f6', '6c117a1a4e1733549a5c29edf32fd988');
+      const client = require('twilio')('xxx', 'xxxx');
 =======
       const client = require('twilio')('ACCOUNT SID', 'AUTH TOKEN');
 >>>>>>> 8a9ceca53154ca28db58c8a29877da59f2f73828
